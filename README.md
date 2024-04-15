@@ -18,7 +18,8 @@ git commit --allow-empty -m "msg"
 git push origin main
 ~~~
 
-### Fazer commit de todos os arquivos juntos (sem utilizar o `add .`)
+### Fazer commit de todos os arquivos modificados e não ignorados ao commit atual (sem utilizar o `add .`).
 ~~~bash
 git commit -a
 ~~~
+
