@@ -1,14 +1,24 @@
 # Praticando Git
 Repositório com finalidade de praticar comandos do Git
 
-## Instalação da extensão 'Git Graph'
-vizualisação do histórico de commits
+### Instalação da extensão 'Git Graph'
+visualização do histórico de commits
 
-origin -> repositório remoto;
+`origin` -> repositório remoto;
 
-**main** -> está em negrito porque é a branch ativa;
+`main*` -> está em negrito e com o `*` porque é a branch ativa;
 
-_*comando para commitar mesmo sem modificação*_
+### Fazer um commit sem alterações
 ~~~bash
-git commit --allow-empty
+git commit --allow-empty -m "msg"
+~~~
+
+### Fazer push para enviar alterações locais para o remoto (main/origin)
+~~~bash
+git push origin main
+~~~
+
+### Fazer commit de todos os arquivos juntos (sem utilizar o `add .`)
+~~~bash
+git commit -a
 ~~~
