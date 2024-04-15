@@ -23,3 +23,10 @@ git push origin main
 git commit -a
 ~~~
 
+### Fazer comunicação de uma branch local para a branch remoto
+~~~bash
+git push -u origin nomeDaBranch
+git push nomeDaBranch
+~~~
+
+
