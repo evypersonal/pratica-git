@@ -26,14 +26,21 @@ O parânmentro `-a` adiciona todos os arquivos modificados;
 
 ### Fazer comunicação de uma branch local para a branch remoto
 ~~~bash
-git push -u origin nomeDaBranch
-git push nomeDaBranch
+git push -u origin <nomeDaBranch>
+git push <nomeDaBranch>
 ~~~
 
 ### Criar uma branch e já ativar ela no mesmo comando 
 ~~~bash
-git checkout -b nomeDaBranch
-git switch -c nomeDaBranch
+git checkout -b <nomeDaBranch>
+git switch -c <nomeDaBranch>
 ~~~
 O parâmetro `-b` alterna para `novoBranch` criando o branch. (utilizando o `checkout`)
 O parâmetro `-c` alterna para `novoBranch` criando o branch. (utilizando o `switch`)
+
+### Deletando uma branch
+~~~bash
+git branch -D <nomeDaBranch>
+git push --delete origin <nomeDaBranch>
+~~~
+Ao executar o primeiro comando removerá a branch localmente, para que seja removido do remoto é necessário utilizar o segundo comando.
