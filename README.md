@@ -20,8 +20,9 @@ git push origin main
 
 ### Fazer commit de todos os arquivos modificados e não ignorados ao commit atual (sem utilizar o `add .`).
 ~~~bash
-git commit -a
+git commit -a -m "msg"
 ~~~
+O parânmentro `-a` adiciona todos os arquivos modificados;
 
 ### Fazer comunicação de uma branch local para a branch remoto
 ~~~bash
@@ -29,4 +30,10 @@ git push -u origin nomeDaBranch
 git push nomeDaBranch
 ~~~
 
-
+### Criar uma branch e já ativar ela no mesmo comando 
+~~~bash
+git checkout -b nomeDaBranch
+git switch -c nomeDaBranch
+~~~
+O parâmetro `-b` alterna para `novoBranch` criando o branch. (utilizando o `checkout`)
+O parâmetro `-c` alterna para `novoBranch` criando o branch. (utilizando o `switch`)
