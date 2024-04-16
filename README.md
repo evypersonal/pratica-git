@@ -44,3 +44,52 @@ git branch -D <nomeDaBranch>
 git push --delete origin <nomeDaBranch>
 ~~~
 Ao executar o primeiro comando removerá a branch localmente, para que seja removido do remoto é necessário utilizar o segundo comando.
+
+###  Reescrever o commit anterior
+~~~bash
+git commit --amend (descrever oque alterar)
+~~~
+
+### Resetando um commit (branch ativa localmente)
+~~~bash
+git reset HEAD~1
+~~~
+
+### Resetando um commit (branch ativa remotamente)
+~~~bash
+git revert HEAD
+~~~
+
+### Mostrando um grafico de commits através do terminal
+~~~bash
+git log --graph --oneline
+~~~
+
+### Subescrevendo o commit / Rebase Interativo (retirando o autor intruso)
+0. Verificar se o editor de mensagem é o vs code:
+~~~bash
+git config --global core.editor "code --wait"
+
+~~~bash
+git rebase -i <hash do commit> ou <HEAD~>
+~~~
+1. (Dentro do editor posso usar o `edit` para editar o commit);
+
+2. No terminal: 
+~~~bash
+git commit --amend --author="evypersonal <evellynmaria2015@outlook.com>" --no-edit
+~~~
+- (Alterando o autor do commit utilizando a flag `--author="username <email>"`);
+- (Ultilizar a flag `--no-edit` para manter as alterações feita no commit);
+
+3. Ignorar os outros commits:
+~~~bash
+git rebase --continue 
+~~~
+
+4. Forçar alterações para o remoto:
+~~~bash
+git push --force
+~~~
+
+###
