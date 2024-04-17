@@ -92,4 +92,7 @@ git rebase --continue
 git push --force
 ~~~
 
-###
+### Reaproveitando um commit de alguma branch
+~~~bash
+git cherry-pick <hashDoCommit>
+~~~
