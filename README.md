@@ -96,3 +96,17 @@ git push --force
 ~~~bash
 git cherry-pick <hashDoCommit>
 ~~~
+
+### Adicionando tags semanticas no commit
+~~~bash
+git tag <nomeDaTag> <hashDoCommit>
+~~~
+- Importância da semântica nas tags --> v0.1.0  --> v1.0.0
+- Importante para adicionar marcos ('milestones') aos commits ou outras referências no histórico do Git.
+- Se não especificar a referência, o Git vai atribuir a tag ao commit apontado por **HEAD**.
+- Deve-se fazer o `push` das tags, utilizando o seguinte comando:
+~~~bash
+git push --tags
+~~~
+
+### 
